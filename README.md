@@ -24,7 +24,7 @@ Step 3:
       
 Step 4:
   - Generate mel spectrographs from wav files
-    - Copy the file_list.txt to the tacotron2/filelists folder (tacotron2 reposity linked above)
+    - Copy the file_list_nospeaker.txt to the tacotron2/filelists folder (tacotron2 reposity linked above)
     - Move the wav files to the tacotron2/filelists/wav folder
     - Download the [published tacotron2 statedict](https://drive.google.com/file/d/1c5ZTuT7J08wLUoVZ2KkUs_VdZuJ86ZqA/view?usp=sharing) into the tacotron2/models folder
     - Run generate_mels.py in the tacotron2 repository to create mel spectrographs
@@ -37,7 +37,7 @@ Step 5:
     - Download the [pretrained HiFi-GAN generator and discriminator models](https://drive.google.com/drive/folders/1YuOoV3lO2-Hhn1F2HJ2aQ4S0LC1JdKLd) into hifi-gan/models
     - Move the wav files into hifi-gan/LJSpeech-1.1/wavs
     - Move the mel files (.npy) from the tacotron2/output folder into hifi-gan/LJSpeech-1.1/wavs
-    - Copy the file_list.txt to the hifi-gan/LJSpeech-1.1 folder
+    - Copy the file_list_nospeaker.txt to the hifi-gan/LJSpeech-1.1 folder
     - Run train.py in the hifi-gan repository for 50k-100k iterations to fine-tune the model
     ```
     python train.py --fine_tuning True --config config_v1.json --checkpoint_path models
